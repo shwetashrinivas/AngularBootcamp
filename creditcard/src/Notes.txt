@@ -1,0 +1,15 @@
+#FORMS:
+
+* REACTIVE FORMS:
+1. Most of the form logic is driven by configuration in a component CLASS file.
+2. More apt for complex forms.
+3. Exposes some aspects of the form to us as RxJS Observables.
+4. We have to wire up the 'ReactiveFormsModule' to our AppModule to use them.
+
+
+
+* TEMPLATE FORMS:
+1. Most of the form logic is driven by configuration in a component TEMPLATE file.
+2. More apt for simple forms.
+3. Harder to deal with dynamic forms
+4. We have to wire up the 'FormsModule' to our AppModule to use them.

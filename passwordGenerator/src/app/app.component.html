@@ -1,0 +1,41 @@
+<h1>Password Generator</h1>
+<div>
+<label>Enter length:</label> 
+<input (input)="onChangeLength($event.target.value)"/>
+</div>
+
+<div>
+  <label>Use letters</label>
+  <input (change)="onChangeUseLetters()" type="checkbox"/>
+</div>
+
+<div>
+  <label>Use numbers</label>
+  <input (change)="onChangeUseNumbers()" type="checkbox"/>
+</div>
+
+<div>
+  <label>Use symbol</label>
+  <input (change)="onChangeUseSymbol()" type="checkbox"/>
+</div>
+
+<!-- Event Binding Syntax -->
+<div>
+<button 
+ [disabled]="!(length && (includeLetters || includeSymbols || includeNumbers))" 
+ (click)="onButtonClick()"
+ class="button is-link is-fullwidth"
+ >
+ Generate
+</button>
+</div>
+
+<!-- Structural Directives : manipulates DOM elements -->
+<div class="box" *ngIf="password">
+  <label>Your password</label>
+  <!-- Property Binding -->
+  <input [value]="password"/>
+</div>
+
+<!-- Interpolation : Directly inserts some content into our template-->
+{{ password }}

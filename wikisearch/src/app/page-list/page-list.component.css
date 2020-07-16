@@ -1,0 +1,5 @@
+/* Doesnt work as local css gets applied explicitly to the template content and not to the [innerHTML] code*/
+.searchmatch{
+    font-weight: bold;
+}
+/* Hence add this in global css file */

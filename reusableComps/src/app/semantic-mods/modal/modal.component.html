@@ -1,0 +1,24 @@
+<!-- Event bubbling occurs due to onCloseClick() . Hence will add (click)= "$event.stopPropagation()"-->
+<div (click) ="onCloseClick()" class = "ui dimmer visible active">
+    <div (click)= "$event.stopPropagation()" class = "ui modal visible active">
+        <i (click) ="onCloseClick()" class = "close icon"></i>
+        <div class = "header">
+            <!-- Modal -->
+            <ng-content select="[modalTitle]" ></ng-content>
+        </div>
+        <div class="content">
+            <!-- <p>
+                Some content for the modal window should go here!
+            </p> -->
+            <ng-content></ng-content>
+        </div>
+        <div class= "actions actions-default">
+            <button (click) ="onCloseClick()" class= "ui button"> 
+                OK
+            </button>
+        </div>
+        <div class="actions">
+            <ng-content select= "[modalFooter]"></ng-content>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<nav *ngIf =" true">
+  <ul class="pagination">
+    <!-- Attribute directive -->
+    <li 
+    class = "page-item" 
+    [ngClass] = "{disabled: currentPage === 0}"
+    >
+      <a class="page-link" (click) = "currentPage = currentPage - 1" >Prev</a>
+    </li>
+    <!-- For replacing *ngFor with *appDuplicate ="images.length; let i = index;" -->
+    <ng-container *ngFor= "let image of images; let i =index;">
+    <li 
+      class="page-item" 
+      [ngClass] = "{ active: i === currentPage }"
+      *ngIf = " checkPageIndex(i)"
+    >
+         <a (click) =" currentPage = i " class="page-link">{{ i+1 }}</a>
+    </li>
+    </ng-container>
+    <li class = "page-item" [ngClass] ="{ disabled: currentPage === images.length-1 }" >
+      <a class="page-link" (click) = "currentPage = currentPage + 1" >Next</a>
+    </li>
+  </ul>
+</nav>
+
+<div>
+   <!-- 1 Using custom directive -->
+  <h4 appClassdir [backgroundColor] = " 'red' "> {{ images[currentPage].title}} </h4>
+  <img [src] ="images[currentPage].url" />
+</div>
+
+
+  <!-- 2 Using custom directives  -->
+<!-- <div> 
+  <h4 [appClassdir] = " 'red' "> {{ images[currentPage].title}} </h4>
+  <img [src] ="images[currentPage].url" />
+</div>-->
+
+<!-- ngswitch -->
+
+<div [ngSwitch] = "currentPage">
+  <div *ngSwitchCase ="0">
+    Current Page is one
+  </div>
+  <div *ngSwitchCase ="1">
+    Current Page is two
+  </div>
+  <div *ngSwitchCase ="2">
+    Current Page is three
+  </div>
+  <div *ngSwitchDefault>
+    Unknown current Page!
+  </div>
+</div>
+
+
+
+<!-- For using way 4 , change all [ngClass] to [appClassdir] in the above code. -->
+
+<!-- Using custom structural directives -->
+
+<ul *appDuplicate ="5">
+  <li>Hi there!</li>
+</ul>

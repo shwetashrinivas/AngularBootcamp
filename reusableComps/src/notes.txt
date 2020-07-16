@@ -1,0 +1,17 @@
+#Lazy Loading
+1.By default, Angular uses Eager Loading, which means that as soon as the app loads, so do all the NgModules, whether or not they are immediately necessary.
+2.For large apps with lots of routes, consider lazy loading—a design pattern that loads NgModules as needed.
+
+For implementing Lazy Loading:
+1. Choose which modules should be lazy loaded
+2. For each of those modules, remove import statements for those from anywhere in the project.
+3. In the AppRoutingModule, define a Route in the 'routes' array to specify when to load up that module.
+
+const routes: Routes = [
+  {
+    path:'somepath', 
+    loadChildren: () => import('./path/to/module').then(m => m.someModule)
+  }]
+
+4. In the lazy loaded module's Routing file , edit the 'path' of each route to be relative to the path you specified in the AppRoutingModule.
+

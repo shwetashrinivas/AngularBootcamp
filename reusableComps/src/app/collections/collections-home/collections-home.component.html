@@ -1,0 +1,21 @@
+<app-divider>
+    Table component
+</app-divider>
+<app-table 
+class ="striped celled"
+[data] ="data" 
+[headers] ="headers"></app-table>
+
+<app-divider>
+    Tab Menu
+</app-divider>
+
+<app-tabs>
+           <!-- Relative path <a class="item"  routerLink="/collections" routerLinkActive="active"> Biography </a>-->
+            <!-- Matching exact path using [routerLinkActiveOptions] -->
+            <a class="item"  routerLink="./" routerLinkActive="active" [routerLinkActiveOptions] ="{exact: true}"> Biography </a>
+            <a class="item" routerLink="./companies" routerLinkActive="active"> Companies </a>
+            <a class="item" routerLink="./partners" routerLinkActive="active"> Partners </a>
+            <!-- Alternate Routerlink syntax -->
+            <!-- <a class="item" [routerLink]="['./partners',partOfLink]" routerLinkActive="active"> Partners </a> -->
+</app-tabs>

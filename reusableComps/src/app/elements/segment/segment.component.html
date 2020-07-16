@@ -1,0 +1,18 @@
+<!-- <div class="ui placeholder segment">
+    <div class="ui icon header">
+        <i class= "pdf file outline icon">
+            No documents are listed for this customer.
+        </i>
+    </div>
+    <button class="ui primary button">
+        Add document
+    </button>
+</div> -->
+
+<!-- Using ng-content with select -->
+<div class="ui placeholder segment">
+    <div class="ui icon header">
+<ng-content select="header"></ng-content>
+    </div>
+<ng-content></ng-content>
+</div>

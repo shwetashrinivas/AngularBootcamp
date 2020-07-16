@@ -1,0 +1,5 @@
+<div class = "container">
+    <app-search-bar (submitted) = "onTerm($event)"></app-search-bar>
+    <!-- [target property] = "source reference back in component" -->
+    <app-page-list *ngIf ="pages.length" [lpages]= "pages" ></app-page-list>    
+</div>

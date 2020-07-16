@@ -1,0 +1,29 @@
+#Url:
+https://en.wikipedia.org/w/api.php?
+action=query&
+format=json&
+list=search&
+utf8=1&
+srsearch=space
+
+#Dependency Injection:
+Components, services ask for dependencies rather than creating them directly.
+
+
+#Angular Security:
+
+*XSS Attacks: (cross-Site Scripting attacks)
+1. Allows malicious users to run js code on other users' browsers.
+2. This bad js code can be used to steal credentia's, make requests etc.
+3. Hence angular auto escapes HTML.
+
+To prevent this:
+1. Angular escaper which shows plain text as plain text outside DOM.
+2. innerHTML property 
+//More info : XSS Filter Evasion 
+
+#RxJS - Functional reactive programming library
+1. Seperate library from Angular
+2. Used extensively for managing data.
+3. Used instead of promises or async/await for handling async stuff.
+IDE to play around with RxJS: out.stegrider.now.sh

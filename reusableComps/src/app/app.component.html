@@ -1,0 +1,15 @@
+<!-- Below code refreshes the entire page and reloads all JS  
+<a href="/elements">Elements</a>
+<a href="/collections">Collections</a>-->
+<!-- Hence instead of using href, use routerLink -->
+<div class="ui container">
+    <div class="ui secondary pointing menu">
+        <a routerLink="/elements" routerLinkActive="active" class="item">Elements</a>
+        <a routerLink="/collections" routerLinkActive="active" class="item">Collections</a>        
+        <a routerLink="/views" routerLinkActive="active" class="item">Views</a>        
+        <a routerLink="/mods" routerLinkActive="active" class="item">Mods</a>        
+    </div>
+    <div class="ui segment">
+        <router-outlet></router-outlet>
+    </div>
+</div>
