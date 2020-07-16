@@ -1,0 +1,4 @@
+This is a Template Form example.
+
+#Two way binding - [(ngModel)]
+1.

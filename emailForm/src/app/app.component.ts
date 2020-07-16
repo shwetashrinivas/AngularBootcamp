@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'emailForm';
+  email : string ='';
+
+  /* constructor(){
+    setInterval( () => {
+      this.email += 'a';
+    }, 1000); } */
+
+  onSubmit(){
+    console.log(this.email);
+  }  
 }
