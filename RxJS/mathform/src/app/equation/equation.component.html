@@ -1,0 +1,22 @@
+<!-- <form [formGroup] ="mathForm">
+    {{ mathForm.get('a').value }}
+    {{ mathForm.controls.a.value }}
+    {{ mathForm.value.a }}
+</form> -->
+
+<form [formGroup] ="mathForm">
+    <div class = "equation">
+        {{ a }} + {{ b }} =
+    </div> 
+    <input appAnswerHighlight formControlName ="answer" />
+</form>
+
+<div class="stats">
+    {{ secondsPerSolution | number: '1.1-3' }}
+</div>
+
+<!-- For debugging -->
+<!-- <div> Form is valid: {{ mathForm.valid }} </div>
+<div> Form values: {{ mathForm.value | json }} </div>
+<div> Form erros: {{ mathForm.errors | json }} </div>
+ -->
