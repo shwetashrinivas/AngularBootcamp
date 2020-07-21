@@ -1,0 +1,23 @@
+#Class Based Custom Sync Validator
+1. Create a new class to implement your custom Validator
+2. Have the class implement the 'Validator' interface
+3. Add a 'validate' method to the class, which will be called with a FormGroup or FormControl
+4. Validator method should return 'null' if everything is ok, or an object if something is wrong.
+
+#Class Based Custom Async Validator
+1. Create a new class to implement your custom Validator
+2. Have the class implement the 'AsyncValidator' interface
+3. Add a 'validate' method to the class, which will be called with a FormGroup or FormControl
+4. Validator method should return an Observable or Promise that will emit 'null' if everything is ok, or an object if something is wrong.
+// of() is a shortcut to create Observable
+
+#Requirements for  SignedIn Observable
+1. We must be able to get it to emit a new value 'from the outside'
+2. We must be able to give it a default,or starting value.
+3. New subscribers must be given the value from it immediately after subscribing.
+
+//By default , Angular ignores the http cookies until we use 
+ withcredentials:true property explicitly.
+Hence use Http Interceptor
+
+ 
