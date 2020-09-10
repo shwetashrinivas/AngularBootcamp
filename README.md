@@ -10,5 +10,5 @@ Reusable angular code components:
 1. Typing Challenge
 2. Wikisearch
 3. Password Generator
-4. Credit cads
+4. Credit card
 5. Picture Cards
